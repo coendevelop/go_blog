@@ -1,0 +1,7 @@
+<h1>My Blog</h1>
+<a href="/new">Create New Post</a>
+<hr>
+{{range .}}
+    <h2>{{.Title}}</h2>
+    <p>{{.Content}}</p>
+{{end}}
