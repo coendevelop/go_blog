@@ -1,7 +1,10 @@
 <h1>My Blog</h1>
-<a href="/new">Create New Post</a>
+{{if ne $.isLoggedIn 0}}<a href="/new">Create New Post</a>{{end}}
+TEST
 <hr>
 {{range .}}
     <h2>{{.Title}}</h2>
+    <p>{{.Created_At}}</p>
     <p>{{.Content}}</p>
+    <h6>{{.ID}}</h6>
 {{end}}

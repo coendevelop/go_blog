@@ -1,5 +1,10 @@
 module blog
 
-go 1.22.2
+go 1.24.0
 
-require github.com/mattn/go-sqlite3 v1.14.32 // indirect
+toolchain go1.24.11
+
+require (
+	github.com/mattn/go-sqlite3 v1.14.32
+	golang.org/x/crypto v0.46.0
+)
