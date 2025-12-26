@@ -28,7 +28,7 @@ func indexHandler(w http.ResponseWriter, r *http.Request) {
 		posts = append(posts, p)
 	}
 
-	tmpl := template.Must(template.ParseFiles("index.html"))
+	tmpl := template.Must(template.ParseFiles("templates/index.tmpl"))
 	tmpl.Execute(w, posts)
 }
 
@@ -40,7 +40,7 @@ func newPostHandler(w http.ResponseWriter, r *http.Request) {
 		http.Redirect(w, r, "/", http.StatusSeeOther)
 		return
 	}
-	tmpl := template.Must(template.ParseFiles("new.html"))
+	tmpl := template.Must(template.ParseFiles("templates/new.tmpl"))
 	tmpl.Execute(w, nil)
 }
 
